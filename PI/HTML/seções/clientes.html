@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Cliente - Portal de Receitas</title>
+    <link rel="stylesheet" href="../../CSS/clientes.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../../imagens/Logo/logo (1).png" alt="Logo do Portal de Receitas">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="../seções/receita.html">Receitas</a></li>
+                <li><a href="../seções/clientes.html" class="ativo">Área do Cliente</a></li>
+                <li><a href="../seções/contatos.html">Contato</a></li>
+            </ul>
+        </nav>
+  <div class="busca">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+    </header>
+
+    <main>
+        <section class="login">
+            <h2>Login do Cliente</h2>
+            <form onsubmit="simularLogin(event)">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section class="envio-receita">
+            <h2>Envie sua Receita</h2>
+            <form onsubmit="simularEnvio(event)">
+                <label for="titulo">Nome da Receita:</label>
+                <input type="text" id="titulo" required>
+
+                <label for="ingredientes">Ingredientes:</label>
+                <textarea id="ingredientes" rows="4" required></textarea>
+
+                <label for="preparo">Modo de Preparo:</label>
+                <textarea id="preparo" rows="5" required></textarea>
+
+                <label for="imagem">Imagem da Receita:</label>
+                <input type="file" id="imagem" accept="image/*">
+
+                <button type="submit">Enviar Receita</button>
+            </form>
+        </section>
+    </main>
+
+<footer class="footer-copy">
+  <p>© 2025 Portal de Receitas | Projeto Educacional — Desenvolvido por <strong>Guilherme Hinori</strong></p>
+</footer>
+
+    <script>
+        function simularLogin(e) {
+            e.preventDefault();
+            alert("Login simulado! (Funcionalidade em desenvolvimento)");
+        }
+        function simularEnvio(e) {
+            e.preventDefault();
+            alert("Receita enviada com sucesso! (Simulação)");
+        }
+    </script>
+
+</body>
+</html>
