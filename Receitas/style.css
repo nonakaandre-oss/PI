@@ -1,0 +1,274 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== HEADER ===================== */
+.container {
+  background-color: #f2c335;
+  height: 10em;
+  display: flex;
+  justify-content: space-between; /* distribui logo, busca e ícone */
+  align-items: center; /* centraliza verticalmente */
+  padding: 0 2em; /* espaçamento lateral */
+}
+
+/* Logo */
+.logo {
+  height: 200px;
+  width: auto;
+}
+
+/* Ícone do usuário */
+.u-icon {
+  width: 60px;
+  height: 60px;
+  fill: #f28322;
+  border: 3px solid #f28322;
+  border-radius: 50%;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.u-icon:hover {
+  fill: #f82a14;
+  border-color: #f82a14;
+  transform: scale(1.05);
+}
+
+/* ===================== BUSCA ===================== */
+.busca {
+  flex: 1 1;
+  max-width: 400px;
+  margin: 0 2em;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.form-control {
+  flex: 0;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.btn {
+  background-color: #f28322;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f82a14;
+  transform: scale(1.05);
+}
+
+/* ===================== CARROSSEL ===================== */
+.carrossel-categorias {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  padding: 2em;
+}
+
+.container-categorias {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container-categorias::-webkit-scrollbar {
+  display: none;
+}
+
+.categoria {
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.categoria a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.categoria img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eee;
+  transition: 0.3s;
+}
+
+.categoria a:hover img {
+  border-color: #ff7b00;
+}
+
+.categoria a:hover p {
+  color: #ff7b00;
+  font-weight: 600;
+}
+
+.categoria p {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: large;
+}
+/*===========Card pricipal==========*/
+.card{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+/*background-color: #fdf2cb;
+border-radius: 12px;
+padding: 20px;
+box-shadow: 0 2px 10px #F8D765;*/
+margin: 30px;
+}
+.card-img{
+  width: 600px;
+  height: 700px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card-text{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  max-width: 650px;
+}
+.card-text h1{
+  font-family: delius;
+  margin-bottom: 0.8em;
+  font-size: 3em;
+}
+.card-text h2{
+  text-align: center;
+  font-size: 1.6em;
+  color: #333;
+margin-bottom: 0.8em;
+}
+.card-text ul {
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  padding-left: 5%;
+  padding-right: 5%; 
+  list-style-position: inside;
+  text-align: center;
+  
+}
+.card-text li {
+  margin-bottom: 8px;
+  justify-content: center;
+}
+.card-text p{
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  padding-left: 5%;
+  padding-right: 5%; 
+  list-style-position: inside;
+  text-align: center;
+}
+.card-button{
+ background-color: #f28322;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #f82a14;
+  transform: scale(1.05);
+} 
+.card-text button{
+  align-self: center;
+}
+
+.menu {
+  overflow: hidden;
+  font-family: Arial;
+}
+
+.menu a {
+  float: left;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  text-align: start;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropdownbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 1em;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0; 
+}
+
+.conteudo {
+  display: none;
+  position: absolute;
+  background-color: #f2c335;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.conteudo a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.conteudo a:hover{
+  background-color: #f82a14;
+}
+
+.dropdownbtn:hover {
+  background-color: #f2c335;
+}
+
+.dropdown:hover .conteudo {
+  display: block;
+}
