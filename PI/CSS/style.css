@@ -18,15 +18,7 @@ header {
 .logo {
   height: 60px;
 }
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-}
-
-nav a.ativo {
+div a.ativo {
   color: #2ecc71;
 }
 body{
@@ -46,7 +38,8 @@ body{
 }
 
 .form-control {
-  flex: 0;
+  flex-grow: 1;
+  width: auto;
   padding: 0.6em 1em;
   font-size: 1em;
   border: 1px solid #ccc;
@@ -56,7 +49,7 @@ body{
 }
 
 .btn {
-  background-color: #f28322;
+  background-color: black;
   color: white;
   border: none;
   padding: 0.6em 1.2em;
