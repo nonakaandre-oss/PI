@@ -27,7 +27,7 @@ body{
 
 /* ===================== HEADER & NAVEGAÇÃO ===================== */
 header {
-    background: #ffffff;
+    background: #f2c33f;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +55,7 @@ nav a {
     color: var(--cor-texto);
     font-weight: 600;
     font-size: 1.05rem;
-    padding: 5px 0;
+    padding: 2px 0; /*Reduzi para 2px para arrumar a linha da sessão (anteriormente era 5px)*/
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
 }
@@ -260,4 +260,10 @@ textarea {
         /* No mobile, as colunas caem para 1 */
         grid-template-columns: 1fr;
     }
+}
+    /*Centralizar o formulario de login e envio de receitas*/
+.login, .envio-receita {
+    width: 92%;
+    padding: 20px;
+    margin: 0 auto;
 }

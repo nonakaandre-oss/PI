@@ -32,21 +32,6 @@ nav a.ativo {
 body{
   background-color: antiquewhite;
 }
-/* Ícone do usuário */
-.u-icon {
-  width: 60px;
-  height: 60px;
-  fill: #f28322;
-  border: 3px solid #f28322;
-  border-radius: 50%;
-  padding: 5px;
-  transition: all 0.3s ease;
-}
-.u-icon:hover {
-  fill: #f82a14;
-  border-color: #f82a14;
-  transform: scale(1.05);
-}
 /* ===================== BUSCA ===================== */
 .busca {
   flex: 1 1;
