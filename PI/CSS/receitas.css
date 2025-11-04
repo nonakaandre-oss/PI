@@ -168,18 +168,81 @@ body{
 .btn:hover {
   background: #27ae60;
 }
-
-.footer-copy {
-  background-color: #8c3b24;
-  color: #fff7e6;
-  text-align: center;
-  padding: 15px 10px;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-  border-top: 2px solid #b55d3b;
+.footer-gourmet {
+  background-color: #2b1810; /* vinho escuro */
+  color: #f7e9d4; /* bege suave */
+  padding: 50px 0 25px;
+  font-family: 'Delius', cursive;
+  margin-top: 60px;
 }
 
-.footer-copy strong {
-  color: #ffd699;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  color: #f5d29d; /* dourado claro */
+  margin-bottom: 12px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  color: #f5d29d;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f7e9d4;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #f7e9d4;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f5d29d;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  color: #f7e9d4;
+  margin-right: 14px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  color: #f5d29d;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #5e4031;
+  margin-top: 40px;
+  padding-top: 15px;
+  color: #d8bfa6;
+  font-size: 0.9rem;
+}
+
+.footer-bottom i {
+  color: #e76f51;
 }
