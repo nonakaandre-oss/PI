@@ -18,10 +18,9 @@
                 <a href="index.html" class="ativo"><i class="bi bi-house-door-fill"></i> Home</a>
                 <a href="HTML/seções/receita.html"><i class="bi bi-cake2-fill"></i> Receitas</a>
                 <a href="HTML/seções/destaques.html" ><i class="bi bi-star-fill"></i> Destaques</a>
-                <a href="HTML/seções/clientes.html"><i class="bi bi-person-fill"></i> Área do Cliente</a>  
-                <a href="HTML/seções/cadastro.html"><i class="bi bi-file-earmark-plus-fill"></i> Cadastro</a>
                 <a href="HTML/seções/contatos.html"><i class="bi bi-people-fill"></i> Contatos</a>
-            </div>
+    </div>
+
   <div class="busca">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
@@ -32,7 +31,16 @@
       </div>
     </nav>
   </div>
+<div class="login-menu">
+    <button class="login-btn">
+        <i class="bi bi-person-bounding-box"></i>
+    </button>
 
+    <ul class="login-dropdown-menu">
+        <li><a href="HTML/seções/clientes.html"><i class="bi bi-person-fill"></i> Área do Cliente</a></li>
+        <li><a href="HTML/seções/cadastro.html"><i class="bi bi-file-earmark-plus-fill"></i> Cadastro</a></li>
+    </ul>
+</div>  
         </header>
 
         <main>
@@ -147,6 +155,16 @@ Cubra com sorvete de baunilha ou experimente outra combinação, como manteiga d
     <p>© 2025 Portal de Receitas</p>
   </div>
 </footer>
+<script>
+document.querySelector(".login-btn").addEventListener("click", function() {
+    document.querySelector(".login-dropdown-menu").classList.toggle("show");
+});
 
+window.addEventListener("click", function(e) {
+    if (!document.querySelector(".login-menu").contains(e.target)) {
+        document.querySelector(".login-dropdown-menu").classList.remove("show");
+    }
+});
+</script>
 </body>
 </html>

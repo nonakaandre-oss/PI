@@ -14,6 +14,7 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 100;
 }
+
 /* Logo */
 .logo {
   height: 60px;
@@ -368,4 +369,45 @@ button:hover {
 
 .footer-bottom i {
   color: #e76f51;
+}
+.login-menu {
+    position: relative;
+}
+
+.login-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    list-style: none;
+    width: 180px;
+    z-index: 999;
+}
+
+.login-dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-dropdown-menu li a:hover {
+    background: #f2c335;
+}
+.login-dropdown-menu.show {
+    display: block;
 }
