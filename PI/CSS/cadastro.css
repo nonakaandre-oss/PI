@@ -21,12 +21,15 @@ body {
   z-index: 100;
 }
 
-.meu-header .logo{
+.meu-header .logo {
   height: 60px;
+}
+.meu-header div a.ativo {
+  color: #2ecc71;
 }
 
 /* Menu de Navegação (Lista) */
-.meu-header nav ul {
+.meu-header .menu {
     list-style: none;
     display: flex;
     gap: 30px;
@@ -34,18 +37,19 @@ body {
     padding: 0;
 }
 
-.meu-header nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    font-size: 1.05rem;
-    padding-bottom: 4px 0;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
+.meu-header .menu {
+  overflow: hidden;
+  font-family: Arial;
 }
 
-.meu-header nav a:hover, .meu-header nav a.ativo {
-    color:  #2ecc71;
+.meu-header .menu a {
+  float: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  text-align: start;
+  padding: 1em;
+  text-decoration: none;
 }
 /* ===================== BUSCA ===================== */
 .meu-header .busca {
@@ -163,4 +167,45 @@ body {
 
 .footer-bottom i {
   color: #e76f51;
+}
+.login-menu {
+    position: relative;
+}
+
+.login-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    list-style: none;
+    width: 180px;
+    z-index: 999;
+}
+
+.login-dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-dropdown-menu li a:hover {
+    background: #f2c335;
+}
+.login-dropdown-menu.show {
+    display: block;
 }

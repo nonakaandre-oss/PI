@@ -19,14 +19,22 @@ header {
   height: 60px;
 }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #000000;
-  font-weight: 600;
+.menu {
+  overflow: hidden;
+  font-family: Arial;
 }
 
-nav a.ativo {
+.menu a {
+  float: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  text-align: start;
+  padding: 1em;
+  text-decoration: none;
+}
+
+div a.ativo {
   color: #2ecc71;
 }
 .sidebar ul li a.ativo {
@@ -249,4 +257,42 @@ body{
 
 .footer-bottom i {
   color: #e76f51;
+}
+
+.login-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    list-style: none;
+    width: 180px;
+    z-index: 999;
+}
+
+.login-dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-dropdown-menu li a:hover {
+    background: #f2c335;
+}
+.login-dropdown-menu.show {
+    display: block;
 }
