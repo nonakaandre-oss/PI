@@ -8,21 +8,15 @@
     <link rel="stylesheet" href="../../CSS/clientes.css">
 </head>
 <body>
+        <header class="meu-header">
+            <img class="logo" src="../../imagens/Logo/logo.png" alt="logo">
+            <div class="menu">
+                <a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+                <a href="../../HTML/seções/receita.html"><i class="bi bi-cake2-fill"></i> Receitas</a>
+                <a href="../../HTML/seções/destaques.html" ><i class="bi bi-star-fill"></i> Destaques</a>
+                <a href="../../HTML/seções/contatos.html"><i class="bi bi-people-fill"></i> Contatos</a>
+    </div>
 
-    <header class="meu-header">
-        <div class="logo">
-            <img src="../../imagens/Logo/logo.png" alt="Logo do Portal de Receitas">
-        </div>
-        <nav>
-      <ul>
-                <li><a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
-                <li><a href="../seções/receita.html"><i class="bi bi-cake2-fill"></i> Receitas</a></li>
-                <li><a href="../seções/destaques.html"><i class="bi bi-star-fill"></i> Destaques</a></li>
-                <li><a href="../seções/clientes.html" class="ativo"><i class="bi bi-person-fill"></i> Área do Cliente</a></li>
-                <li><a href="../../HTML/seções/cadastro.html "><i class="bi bi-file-earmark-plus-fill"></i> Cadastro</a></li>
-                <li><a href="../seções/contatos.html" ><i class="bi bi-people-fill"></i> Contato</a></li>
-      </ul>
-        </nav>
   <div class="busca">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
@@ -33,6 +27,16 @@
       </div>
     </nav>
   </div>
+<div class="login-menu">
+    <button class="login-btn">
+        <i class="bi bi-person-bounding-box"></i>
+    </button>
+
+    <ul class="login-dropdown-menu">
+        <li><a href="../../HTML/seções/clientes.html" class="ativo"><i class="bi bi-person-fill"></i> Área do Cliente</a></li>
+        <li><a href="../../HTML/seções/cadastro.html"><i class="bi bi-file-earmark-plus-fill"></i> Cadastro</a></li>
+    </ul>
+</div> 
     </header>
 
     <main>
@@ -99,12 +103,12 @@
     <div class="footer-section">
       <h4>Nos acompanhe</h4>
       <div class="social-icons">
-        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="#">https://github.com/Cookflix/PI.git<i class="bi bi-github"></i></a>
       </div>
     </div>
 
   <div class="footer-bottom">
-    <p>© 2025 Portal de Receitas — Feito com <i class="bi bi-heart-fill"></i> por amantes da culinária.</p>
+    <p>© 2025 Portal de Receitas</p>
   </div>
 </footer>
     <script>
@@ -117,6 +121,16 @@
             alert("Receita enviada com sucesso! (Simulação)");
         }
     </script>
+<script>
+document.querySelector(".login-btn").addEventListener("click", function() {
+    document.querySelector(".login-dropdown-menu").classList.toggle("show");
+});
 
+window.addEventListener("click", function(e) {
+    if (!document.querySelector(".login-menu").contains(e.target)) {
+        document.querySelector(".login-dropdown-menu").classList.remove("show");
+    }
+});
+</script>
 </body>
 </html>
