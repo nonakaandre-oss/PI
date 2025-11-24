@@ -4,26 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal de Receitas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../../CSS/receitas.css">
 </head>
 <body>
-  <header>
-    <img class="logo" src="../../imagens/Logo/logo (1).png" alt="logo">
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../../HTML/seções/receita.html">Receitas</a>
-      <a href="../../HTML/seções/clientes.html">Clientes</a>
-      <a href="../../HTML/seções/contatos.html">Contato</a>
-      <a href="../../HTML/seções/destaques.html">Destaques</a>
+        <header class="container">
+            <img class="logo" src="../../imagens/Logo/logo.png" alt="logo">
+            <div class="menu">
+                <a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+                <a href="../../HTML/seções/receita.html"><i class="bi bi-cake2-fill"></i> Receitas</a>
+                <a href="../../HTML/seções/destaques.html" ><i class="bi bi-star-fill"></i> Destaques</a>
+                <a href="../../HTML/seções/contatos.html"><i class="bi bi-people-fill"></i> Contatos</a>
+    </div>
+
+  <div class="busca">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
     </nav>
-                <div class="busca">
-                    <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    </div>
+  </div>
+<div class="login-menu">
+    <button class="login-btn">
+        <i class="bi bi-person-bounding-box"></i>
+    </button>
+
+    <ul class="login-dropdown-menu">
+        <li><a href="../seções/clientes.html"><i class="bi bi-person-fill"></i> Área do Cliente</a></li>
+        <li><a href="../seções/cadastro.html"><i class="bi bi-file-earmark-plus-fill"></i> Cadastro</a></li>
+    </ul>
+</div> 
   </header>
 
   <div class="container">
@@ -56,7 +69,6 @@
               <span>⏱ 40 min</span>
               <span>🍴 10 ingredientes</span>
             </div>
-            <div class="rating">⭐ 4.7 (15.994)</div>
             <a href="https://www.tudogostoso.com.br/receita/23-bolo-de-cenoura.html" class="btn">Ver Receita</a>
           </div>
         </div>
@@ -71,7 +83,6 @@
               <span>⏱ 40 min</span>
               <span>🍴 08 ingredientes</span>
             </div>
-            <div class="rating">⭐ 4.5 (3.426)</div>
             <a href="https://www.tudogostoso.com.br/receita/3468-bolo-de-fuba-cremoso.htmll" class="btn">Ver Receita</a>
           </div>
         </div>
@@ -85,7 +96,6 @@
               <span>⏱ 40 min</span>
               <span>🍴 09 ingredientes</span>
             </div>
-            <div class="rating">⭐ 4.8 (170)</div>
             <a href="https://www.tudogostoso.com.br/receita/105428-bolo-verde-de-limao.html" class="btn">Ver Receita</a>
           </div>
         </div>
@@ -99,7 +109,6 @@
               <span>⏱ 1 hora</span>
               <span>🍴 14 ingredientes</span>
             </div>
-            <div class="rating">⭐ 4.6 (244)</div>
             <a href="https://www.tudogostoso.com.br/receita/7480-bolo-de-chocolate-fofinho-com-cobertura-de-brigadeiro.html" class="btn">Ver Receita</a>
           </div>
         </div>
@@ -114,7 +123,6 @@
               <span>⏱ 1h 40 min</span>
               <span>🍴 15 ingredientes</span>
             </div>
-            <div class="rating">⭐ 4.3 (33)</div>
             <a href="https://www.tudogostoso.com.br/receita/297682-bolo-red-velvet-com-recheio-de-cream-cheese.html" class="btn">Ver Receita</a>
           </div>
         </div>
@@ -129,7 +137,6 @@
               <span>⏱ 2 hora</span>
               <span>🍴 11 ingredientes</span>
             </div>
-            <div class="rating">⭐ 4 (8)</div>
             <a href="https://www.tudogostoso.com.br/receita/131113-bolo-pao-de-lo-com-chantilly.html" class="btn">Ver Receita</a>
           </div>
         </div>
@@ -138,8 +145,52 @@
     </main>
   </div>
 
-  <footer>
+<footer class="footer-gourmet">
+  <div class="footer-container">
+    
+    <!-- Sobre -->
+    <div class="footer-section">
+      <h3>Portal de Receitas</h3>
+      <p>
+        Um grupo formado para juntar o mundo da tecnologia com a gastronomia! Nosso objetivo é fazer com que as receitas de profissionais sejam compartilhadas pelo mundo todo.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-section">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+        <li><a href="HTML/seções/receita.html"><i class="bi bi-book"></i> Receitas</a></li>
+        <li><a href="HTML/seções/destaques.html"><i class="bi bi-star"></i> Destaques</a></li>
+        <li><a href="HTML/seções/clientes.html"><i class="bi bi-person-circle"></i> Área do Cliente</a></li>
+        <li><a href="HTML/seções/cadastro.html"><i class="bi bi-person-plus"></i> Cadastro</a></li>
+        <li><a href="HTML/seções/contatos.html"><i class="bi bi-envelope"></i> Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Redes -->
+    <div class="footer-section">
+      <h4>Nos acompanhe</h4>
+      <div class="social-icons">
+        <a href="#">https://github.com/Cookflix/PI.git<i class="bi bi-github"></i></a>
+      </div>
+    </div>
+
+  <div class="footer-bottom">
     <p>© 2025 Portal de Receitas</p>
-  </footer>
+  </div>
+</footer>
+<script>
+document.querySelector(".login-btn").addEventListener("click", function() {
+    document.querySelector(".login-dropdown-menu").classList.toggle("show");
+});
+
+window.addEventListener("click", function(e) {
+    if (!document.querySelector(".login-menu").contains(e.target)) {
+        document.querySelector(".login-dropdown-menu").classList.remove("show");
+    }
+});
+</script>
 </body>
 </html>

@@ -19,33 +19,29 @@ header {
   height: 60px;
 }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
+.menu {
+  overflow: hidden;
+  font-family: Arial;
 }
 
-nav a.ativo {
+.menu a {
+  float: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  text-align: start;
+  padding: 1em;
+  text-decoration: none;
+}
+
+div a.ativo {
+  color: #2ecc71;
+}
+.sidebar ul li a.ativo {
   color: #2ecc71;
 }
 body{
   background-color: antiquewhite;
-}
-/* Ícone do usuário */
-.u-icon {
-  width: 60px;
-  height: 60px;
-  fill: #f28322;
-  border: 3px solid #f28322;
-  border-radius: 50%;
-  padding: 5px;
-  transition: all 0.3s ease;
-}
-.u-icon:hover {
-  fill: #f82a14;
-  border-color: #f82a14;
-  transform: scale(1.05);
 }
 /* ===================== BUSCA ===================== */
 .busca {
@@ -61,7 +57,8 @@ body{
 }
 
 .form-control {
-  flex: 0;
+  flex-grow: 1;
+  width: auto;
   padding: 0.6em 1em;
   font-size: 1em;
   border: 1px solid #ccc;
@@ -71,7 +68,7 @@ body{
 }
 
 .btn {
-  background-color: #f28322;
+  background-color: black;
   color: white;
   border: none;
   padding: 0.6em 1.2em;
@@ -183,18 +180,119 @@ body{
 .btn:hover {
   background: #27ae60;
 }
-
-.footer-copy {
-  background-color: #8c3b24;
-  color: #fff7e6;
-  text-align: center;
-  padding: 15px 10px;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-  border-top: 2px solid #b55d3b;
+.footer-gourmet {
+  background-color: #2b1810; /* vinho escuro */
+  color: #f7e9d4; /* bege suave */
+  padding: 50px 0 25px;
+  font-family: 'Delius', cursive;
+  margin-top: 60px;
 }
 
-.footer-copy strong {
-  color: #ffd699;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  color: #f5d29d; /* dourado claro */
+  margin-bottom: 12px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  color: #f5d29d;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f7e9d4;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #f7e9d4;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f5d29d;
+}
+
+.social-icons a {
+  font-size: 1.0rem;
+  color: #f7e9d4;
+  margin-right: 14px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  color: #f5d29d;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #5e4031;
+  margin-top: 40px;
+  padding-top: 15px;
+  color: #d8bfa6;
+  font-size: 0.9rem;
+}
+
+.footer-bottom i {
+  color: #e76f51;
+}
+
+.login-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    list-style: none;
+    width: 180px;
+    z-index: 999;
+}
+
+.login-dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-dropdown-menu li a:hover {
+    background: #f2c335;
+}
+.login-dropdown-menu.show {
+    display: block;
 }

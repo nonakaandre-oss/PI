@@ -4,58 +4,43 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* ===================== HEADER ===================== */
-.container {
-  background-color: #f2c335;
-  height: 10em;
+header {
+  background: #f2c335;
   display: flex;
-  justify-content: space-between; /* distribui logo, busca e ícone */
-  align-items: center; /* centraliza verticalmente */
-  padding: 0 2em; /* espaçamento lateral */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 100;
 }
 
 /* Logo */
 .logo {
-  height: 200px;
-  width: auto;
-}
-
-/* Ícone do usuário */
-.u-icon {
-  width: 60px;
   height: 60px;
-  fill: #f28322;
-  border: 3px solid #f28322;
-  border-radius: 50%;
-  padding: 5px;
-  transition: all 0.3s ease;
 }
-
-.u-icon:hover {
-  fill: #f82a14;
-  border-color: #f82a14;
-  transform: scale(1.05);
+div a.ativo {
+  color: #2ecc71;
 }
-
 body{
   background-color: antiquewhite;
 }
 /* ===================== BUSCA ===================== */
 .busca {
   flex: 1 1;
-  max-width: 400px;
+  max-width: 30%;
   margin: 0 2em;
 }
 
 .d-flex {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 5px;
 }
 
 .form-control {
-  flex: 0;
+  flex-grow: 1;
+  width: auto;
   padding: 0.6em 1em;
   font-size: 1em;
   border: 1px solid #ccc;
@@ -65,7 +50,7 @@ body{
 }
 
 .btn {
-  background-color: #f28322;
+  background-color: black;
   color: white;
   border: none;
   padding: 0.6em 1.2em;
@@ -74,10 +59,41 @@ body{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-.btn:hover {
-  background-color: #f82a14;
-  transform: scale(1.05);
+.container {
+  display: flex;
+  flex: 1;
+}
+/* 🔹 SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 80px);
+}
+.sidebar h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin-bottom: 12px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.sidebar a:hover {
+  color: #2ecc71;
 }
 
 /* ===================== CARROSSEL ===================== */
@@ -224,6 +240,7 @@ button:hover {
 .menu a {
   float: left;
   font-size: 16px;
+  font-weight: 600;
   color: rgb(0, 0, 0);
   text-align: start;
   padding: 1em;
@@ -274,4 +291,123 @@ button:hover {
 
 .dropdown:hover .conteudo {
   display: block;
+}
+.footer-gourmet {
+  background-color: #2b1810; /* vinho escuro */
+  color: #f7e9d4; /* bege suave */
+  padding: 50px 0 25px;
+  font-family: 'Delius', cursive;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  color: #f5d29d; /* dourado claro */
+  margin-bottom: 12px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  color: #f5d29d;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f7e9d4;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #f7e9d4;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f5d29d;
+}
+
+.social-icons a {
+  font-size: 1.0rem;
+  color: #f7e9d4;
+  margin-right: 14px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  color: #f5d29d;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #5e4031;
+  margin-top: 40px;
+  padding-top: 15px;
+  color: #d8bfa6;
+  font-size: 0.9rem;
+}
+
+.footer-bottom i {
+  color: #e76f51;
+}
+.login-menu {
+    position: relative;
+}
+
+.login-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    list-style: none;
+    width: 180px;
+    z-index: 999;
+}
+
+.login-dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-dropdown-menu li a:hover {
+    background: #f2c335;
+}
+.login-dropdown-menu.show {
+    display: block;
 }
